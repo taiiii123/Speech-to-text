@@ -1,0 +1,149 @@
+h2 {
+    color: white;
+    text-align: center;
+}
+
+div#content {
+    color: white;
+    text-align: left;
+}
+
+button#startBtn, button#stopBtn {
+    display: inline;
+    margin: 0 auto;
+}
+
+div#content {
+    padding-top: auto;
+    padding-top: 20px;
+}
+
+.draw-border {
+    box-shadow: inset 0 0 0 4px #58afd1;
+    color: #58afd1;
+    transition: color 0.25s 0.0833333333s;
+    position: relative;
+}
+
+.draw-border::before,
+.draw-border::after {
+    border: 0 solid transparent;
+    box-sizing: border-box;
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.draw-border::before {
+    border-bottom-width: 4px;
+    border-left-width: 4px;
+}
+
+.draw-border::after {
+    border-top-width: 4px;
+    border-right-width: 4px;
+}
+
+.start:hover {
+    color: #001aff;
+}
+
+.start:hover::before,
+.start:hover::after {
+    border-color: #001aff;
+    transition: border-color 0s, width 0.25s, height 0.25s;
+    width: 100%;
+    height: 100%;
+}
+.stop:hover {
+    color: #d61010;
+}
+
+.stop:hover::before,
+.stop:hover::after {    
+    border-color: #d61010;
+    transition: border-color 0s, width 0.25s, height 0.25s;
+    width: 100%;
+    height: 100%;
+}
+
+.draw-border:hover::before {
+    transition-delay: 0s, 0s, 0.25s;
+}
+
+.draw-border:hover::after {
+    transition-delay: 0s, 0.25s, 0s;
+}
+
+.btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    line-height: 1.5;
+    font: 700 1.2rem "Roboto Slab", sans-serif;
+    padding: 1em 2em;
+    letter-spacing: 0.05rem;
+}
+
+.btn:focus {
+    outline: 2px dotted #55d7dc;
+}
+
+body {
+    background: #1f1a25;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+/*---------------------------------
+タイトルつき囲み枠
+--------------------------------*/
+.point-box {
+    position: relative;
+    border: 4px double #ffffff; /* 枠の太さ・種類・色 */
+    border-radius: 4px; /* 枠の丸み */
+    margin: 1.8em 1em; /* 枠外の余白 */
+    padding: 5px 15px;
+    height: 40vh;
+}
+
+.point-title {
+    position: absolute;
+    padding: 0 0.5em;
+    left: 20px;
+    top: -13px; /* タイトルの位置を調整 */
+    color: #ffffff; /* タイトルの文字色 */
+    font-weight: bold;
+    font-size:0.9em; /* タイトルの文字サイズ */
+    background-color: #1f1a25;
+}
+
+button#stopBtn {
+    float: right;
+    margin-right: 20px;
+}
+button#startBtn {
+    margin-left: 10px;
+}
+
+div#content {
+    padding: 0;
+}
+
+p {
+    margin: 0;
+}
+
+button#startBtn {
+    padding: 15px;
+}
+
+button#stopBtn {
+    padding: 15px;
+}
+
